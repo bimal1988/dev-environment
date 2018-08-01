@@ -26,12 +26,12 @@ sudo apt-get install neovim
 ### Better to do this with miniconda -
 ### Install [miniconda](https://conda.io/miniconda.html)
     - Install python 2 plugin for neovim
-    ```
+```
     conda create --name py27 python=2.7
     source activate py27
     pip install neovim
     source deactivate
-    ```
+```
     - Install python 3 plugin for neovim
     ```
     conda create --name py27 python=2.7

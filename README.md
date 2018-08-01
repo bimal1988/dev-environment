@@ -10,7 +10,7 @@ sudo apt-get install tmux
 ```
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ```
-- Create tmux configuration file '.txux.conf'
+- Create tmux configuration file '.tmux.conf'
 
 - Copy contents of downloaded .tmux.conf to created .tmux.conf
 
@@ -26,7 +26,7 @@ sudo apt-get install neovim
 - Install [miniconda](https://conda.io/miniconda.html)
 - Install python 2 plugin for neovim
 ```
-create --name py27 python=2.7
+conda create --name py27 python=2.7
 source activate py27
 pip install neovim
 source deacticondavate

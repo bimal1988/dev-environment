@@ -14,7 +14,7 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 ## Copy contents of downloaded .tmux.conf to created .tmux.conf
 
-## Open tmu (to reload configurations press C-a + I)
+## Open tmux (to reload configurations press C-a + I)
 
 ## Install Neovim
 ```
@@ -24,11 +24,11 @@ sudo apt-get install neovim
 ```
 ## Install python dependency
 ### Better to do this with miniconda -
-### 	Install miniconda
-      - Create virtual environment for python 2.7
-      - Activate and pip install neovim for python 2 support
-      - Create virtual environment for python 3.x
-      - Activate and pip install neovim for python 3 support
+### 	Install [miniconda](https://conda.io/miniconda.html)
+      -Create virtual environment for python 2.7
+      -Activate and pip install neovim for python 2 support
+      -Create virtual environment for python 3.x
+      -Activate and pip install neovim for python 3 support
 ```
 pip install neovim
 ```

@@ -33,8 +33,8 @@ source deacticondavate
 ```
 - Install python 3 plugin for neovim
 ```
-conda create --name py27 python=2.7
-source activate py27
+conda create --name py37 python=3.7
+source activate py37
 pip install neovim
 source deactivate
 ```

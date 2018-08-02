@@ -146,9 +146,9 @@ set termguicolors			" Enable true colors
 syntax enable 
 
 " Set colors in terminal
-" Solarized, dark, with true color support
+" NeoSolarized / onedark
 set background=dark
-colorscheme NeoSolarized
+colorscheme onedark
 
 " Set extra options when running in GUI mode
 if has("gui_running")

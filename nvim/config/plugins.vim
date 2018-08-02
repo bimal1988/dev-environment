@@ -70,7 +70,6 @@ if dein#load_state('~/.config/nvim/bundle')
 
     " Tmux integration
     call dein#add('christoomey/vim-tmux-navigator')
-    call dein#add('edkolev/tmuxline.vim')
 
     call dein#end()
     call dein#save_state()

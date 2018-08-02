@@ -38,3 +38,11 @@ source activate py37
 pip install neovim
 source deactivate
 ```
+- Install dein - dark powered plugin manager for nevim
+```
+cd ~
+curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
+sh ./installer.sh ~/.config/nvim/bundle
+rm installer.sh
+mkdir ~/.config/nvim/tmp
+```

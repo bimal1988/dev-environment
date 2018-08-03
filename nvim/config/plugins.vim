@@ -49,11 +49,10 @@ if dein#load_state('~/.config/nvim/bundle')
         call dein#add('roxma/nvim-yarp')
         call dein#add('roxma/vim-hug-neovim-rpc')
     endif
+    call dein#add('zchee/deoplete-clang')
     call dein#add('zchee/deoplete-jedi')
+    call dein#add('carlitux/deoplete-ternjs')
     call dein#add('steelsojka/deoplete-flow')
-    call dein#add('ternjs/tern_for_vim', {
-	\ 'do': 'npm install'
-	\ })
 
     " Code snippets
     call dein#add('SirVer/ultisnips')

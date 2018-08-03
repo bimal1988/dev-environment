@@ -1,4 +1,7 @@
-" split pane navigation
+" Remap escape key
+inoremap jj <Esc>
+
+" Split pane navigation
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
@@ -7,14 +10,14 @@ nnoremap <C-H> <C-W><C-H>
 " Delete trailing whitespace with F5
 :nnoremap <silent> <F5> :let _s=@/ <Bar> :%s/\s\+$//e <Bar> :let @/=_s <Bar> :nohl <Bar> :unlet _s <CR>
 
-" nerdtree
+" Nerdtree
 " autocmd vimenter * NERDTree " start nerdtree automatically when vim starts up
 map <C-n> :NERDTreeToggle<CR>
 
-" deoplete tab-complete
+" Deoplete tab-complete
 inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 
-" keybindings for language client
+" Keybindings for language client
 nnoremap <silent> K :call LanguageClient_textDocument_hover()<CR>
 nnoremap <silent> gd :call LanguageClient_textDocument_definition()<CR>
 nnoremap <silent> gr :call LanguageClient_textDocument_references()<CR>
@@ -53,4 +56,3 @@ smap <silent><CR> <Plug>(neosnippet_jump_or_expand)
 if has('conceal')
   set conceallevel=2 concealcursor=niv
 endif
-

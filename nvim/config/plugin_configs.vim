@@ -53,33 +53,16 @@ nnoremap <silent> <leader>d :GitGutterToggle<cr>
 " ===========================================================
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#enable_smart_case = 1
-let b:deoplete_disable_auto_complete = 1
 let g:deoplete_disable_auto_complete = 1
-let g:tern_show_argument_hints = 'on_hold'
-let g:tern_show_signature_in_pum = 1
 
 call deoplete#custom#buffer_option('auto_complete', v:true)
-
-call deoplete#custom#source('LanguageClient',
-            \ 'min_pattern_length',
-            \ 2)
-   
-if !exists('g:deoplete#omni#input_patterns')
-    let g:deoplete#omni#input_patterns = {}
-endif
 
 call deoplete#custom#source('_',
             \ 'disabled_syntaxes', ['Comment', 'String'])
 
 autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
 
-autocmd FileType javascript setlocal omnifunc=tern#Complete
+let g:deoplete#sources#clang#libclang_path = '/usr/local/Cellar/llvm/6.0.0/lib/libclang.dylib'
+let g:deoplete#sources#clang#clang_header = '/usr/local/Cellar/llvm/6.0.0/lib/clang'
 
-" Set sources
-let g:deoplete#sources = {}
-let g:deoplete#sources.cpp = ['LanguageClient']
-let g:deoplete#sources.python = ['LanguageClient']
-let g:deoplete#sources.python3 = ['LanguageClient']
-let g:deoplete#sources.rust = ['LanguageClient']
-let g:deoplete#sources.c = ['LanguageClient']
-let g:deoplete#sources.vim = ['vim']
+let g:deoplete#sources#jedi#show_docstring = 1

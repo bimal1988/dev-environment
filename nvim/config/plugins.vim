@@ -55,8 +55,8 @@ if dein#load_state('~/.config/nvim/bundle')
     call dein#add('steelsojka/deoplete-flow')
 
     " Code snippets
-    call dein#add('SirVer/ultisnips')
-    call dein#add('honza/vim-snippets')
+    call dein#add('Shougo/neosnippet.vim')
+    call dein#add('Shougo/neosnippet-snippets')
 
     " Git support
     call dein#add('tpope/vim-fugitive')

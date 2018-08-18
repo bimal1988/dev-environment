@@ -49,8 +49,8 @@ smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
 
 " Expands or completes the selected snippet/item in the popup menu
 imap <expr><silent><CR> pumvisible() ? deoplete#mappings#close_popup() .
-      \ "\<Plug>(neosnippet_jump_or_expand)" : "\<CR>"
-smap <silent><CR> <Plug>(neosnippet_jump_or_expand)
+      \ "\<Plug>(neosnippet_expand_or_jump)" : "\<CR>"
+smap <silent><CR> <Plug>(neosnippet_expand_or_jump)
 
 " For conceal markers.
 if has('conceal')

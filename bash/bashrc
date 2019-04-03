@@ -12,4 +12,3 @@ alias vim="nvim"
 alias l="ls"
 alias ll="ls -la"
 alias la="ls -a"
-PS1='\W \$ '

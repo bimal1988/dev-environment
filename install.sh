@@ -92,6 +92,11 @@ setup_fzf() {
 
 setup_bash() {
     echo "TODO: Pending bash setup"
+    # Install Poweline Fonts
+    git clone https://github.com/powerline/fonts.git
+    cd fonts
+    sh install.sh
+    echo "Change the font to Meslo LG M DZ Regular in terminal app to be able to use powerline fonts..."
 }
 
 case $HOST_OS in

@@ -24,23 +24,45 @@ let g:lightline = {
 let g:lightline = {
       \ 'colorscheme': 'onedark',
       \ 'active': {
-      \   'left': [ ['mode', 'paste'],
-      \             ['fugitive', 'readonly', 'filename', 'modified'] ],
-      \   'right': [ [ 'lineinfo' ], ['percent'] ]
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'fugitive', 'readonly', 'modified' ] ],
+      \   'right': [ [ 'lineinfo' ], [ 'percent' ] ]
       \ },
       \ 'component': {
-      \   'readonly': '%{&filetype=="help"?"":&readonly?"🔒":""}',
+      \   'readonly': '%{&filetype=="help"?"":&readonly?"":""}',
       \   'modified': '%{&filetype=="help"?"":&modified?"+":&modifiable?"":"-"}',
-      \   'fugitive': '%{exists("*fugitive#head")?fugitive#head():""}'
+      \   'lineinfo': ' %3l:%-2v'
+      \ },
+      \ 'component_function': {
+      \   'fugitive': 'LightlineFugitive'
       \ },
       \ 'component_visible_condition': {
       \   'readonly': '(&filetype!="help"&& &readonly)',
-      \   'modified': '(&filetype!="help"&&(&modified||!&modifiable))',
-      \   'fugitive': '(exists("*fugitive#head") && ""!=fugitive#head())'
-      \ },
-      \ 'separator': { 'left': ' ', 'right': ' ' },
-      \ 'subseparator': { 'left': ' ', 'right': ' ' }
+      \   'modified': '(&filetype!="help"&&(&modified||!&modifiable))'
+      \ }
 \ }
+
+function! LightlineFugitive()
+      if exists('*fugitive#head')
+            let branch = fugitive#head()
+            return branch !=# '' ? ' '.branch : ''
+      endif
+      return ''
+endfunction
+
+let g:lightline.separator = {
+      \   'left': '', 'right': ''
+\ }
+let g:lightline.subseparator = {
+	\   'left': '', 'right': ''
+\ }
+
+let g:lightline.tabline = {
+      \   'left': [ ['tabs'] ],
+      \   'right': [ ['close'] ]
+\ }
+set showtabline=2  " Show tabline
+set guioptions-=e  " Don't use GUI tabline
 
 " ===========================================================
 " ===              Git gutter (Git diff)                  ===    

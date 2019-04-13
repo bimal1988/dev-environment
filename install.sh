@@ -105,7 +105,9 @@ case $HOST_OS in
         brew_install git git
         brew_install tmux tmux
         brew_install nvim neovim
+        brew_install ripgrep ripgrep
         brew_install fzf fzf
+        brew_install tree tree
         install_conda
         setup_tmux
         setup_neovim

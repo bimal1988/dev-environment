@@ -31,10 +31,8 @@ if dein#load_state('~/.config/nvim/bundle')
     call dein#add('itchyny/lightline.vim')
     
     " Fuzzy finder
-    call dein#add('junegunn/fzf', {
-	\ 'dir': '~/.fzf',
-	\ 'do': './install --all' 
-	\ })
+    call dein#add('/usr/local/opt/fzf')
+    call dein#add('junegunn/fzf.vim')
 
     " Navigate files in sidebar
     call dein#add('scrooloose/nerdtree')

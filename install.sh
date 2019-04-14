@@ -108,6 +108,7 @@ case $HOST_OS in
         brew_install ripgrep ripgrep
         brew_install fzf fzf
         brew_install tree tree
+        brew_install bat bat
         install_conda
         setup_tmux
         setup_neovim

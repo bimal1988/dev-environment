@@ -1,5 +1,25 @@
+" Remap leader key
+let mapleader      = ' '
+let maplocalleader = ' '
+
 " Remap escape key
 inoremap jj <Esc>
+
+" Movement in insert mode
+inoremap <C-h> <C-o>h
+inoremap <C-l> <C-o>a
+inoremap <C-j> <C-o>j
+inoremap <C-k> <C-o>k
+inoremap <C-^> <C-o><C-^>
+
+" Save
+nnoremap <leader>s :update<cr>
+nnoremap <leader>w :update<cr>
+
+" Quit
+nnoremap <Leader>q :q<cr>
+nnoremap <Leader>Q :qa!<cr>
+nnoremap <Leader>qq :q!<cr>
 
 " Split pane navigation
 nnoremap <C-J> <C-W><C-J>
@@ -52,3 +72,11 @@ smap <silent><CR> <Plug>(neosnippet_expand_or_jump)
 if has('conceal')
   set conceallevel=2 concealcursor=niv
 endif
+
+" Nerd Tree
+map <leader>n :NERDTreeToggle<cr>
+map <leader>nb :NERDTreeFromBookmark<Space>
+map <leader>nf :NERDTreeFind<cr>
+
+" Git gutter (Git diff)
+nnoremap <silent> <leader>d :GitGutterToggle<cr>

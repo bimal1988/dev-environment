@@ -1,4 +1,10 @@
 # ===========================================================
+# ===                       General                       ===
+# ===========================================================
+export PLATFORM=$(uname -s)
+
+
+# ===========================================================
 # ===                       Options                       ===
 # ===========================================================
 shopt -s histappend         # Append to the history file
@@ -29,6 +35,7 @@ alias l="ls"
 alias ll="ls -la"
 alias la="ls -a"
 alias tmux="tmux -2"
+alias cl="clear"
 
 
 # ===========================================================
@@ -66,3 +73,11 @@ export FZF_TMUX=1
 export FZF_CTRL_T_OPTS="--preview '(bat --style=numbers --color=always {} 2> /dev/null || cat {} || tree -C {}) 2> /dev/null | head -200'"
 export FZF_ALT_C_OPTS="--preview 'tree -C {} | head -200'"
 export FZF_COMPLETION_TRIGGER=',,'
+
+
+# ===========================================================
+# ===                    Key Bindings                     ===
+# ===========================================================
+if [[ $- =~ i ]]; then
+  bind '"\er": redraw-current-line'
+fi

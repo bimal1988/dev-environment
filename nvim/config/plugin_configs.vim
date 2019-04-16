@@ -10,20 +10,19 @@ let g:NERDTreeWinSize=35
 " ===                        Ale                          ===    
 " ===========================================================
 let g:ale_completion_enabled = 0
+let g:ale_sign_error = '✗'
+let g:ale_sign_warning = '◆'
+highlight ALEWarningSign ctermfg=172
 
 " ===========================================================
 " ===                      Ligthline                      ===    
 " ===========================================================
 let g:lightline = {
       \ 'colorscheme': 'onedark',
-      \ }
-
-let g:lightline = {
-      \ 'colorscheme': 'onedark',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'fugitive', 'readonly', 'modified' ] ],
-      \   'right': [ [ 'lineinfo' ], [ 'percent' ] ]
+      \   'right': [ [ 'lineinfo' ], [ 'percent' ], [ 'linter_checking', 'linter_errors', 'linter_warnings', 'linter_ok' ] ]
       \ },
       \ 'component': {
       \   'readonly': '%{&filetype=="help"?"":&readonly?"":""}',
@@ -36,6 +35,18 @@ let g:lightline = {
       \ 'component_visible_condition': {
       \   'readonly': '(&filetype!="help"&& &readonly)',
       \   'modified': '(&filetype!="help"&&(&modified||!&modifiable))'
+      \ },
+      \ 'component_expand': {
+      \  'linter_checking': 'lightline#ale#checking',
+      \  'linter_warnings': 'lightline#ale#warnings',
+      \  'linter_errors': 'lightline#ale#errors',
+      \  'linter_ok': 'lightline#ale#ok'
+      \ },
+      \ 'component_type': {
+      \     'linter_checking': 'left',
+      \     'linter_warnings': 'warning',
+      \     'linter_errors': 'error',
+      \     'linter_ok': 'left'
       \ }
 \ }
 
@@ -58,8 +69,13 @@ let g:lightline.tabline = {
       \   'left': [ ['tabs'] ],
       \   'right': [ ['close'] ]
 \ }
+
 set showtabline=2  " Show tabline
 set guioptions-=e  " Don't use GUI tabline
+let g:lightline#ale#indicator_checking = "⏳"
+let g:lightline#ale#indicator_warnings = "◆ "
+let g:lightline#ale#indicator_errors = "✗ "
+let g:lightline#ale#indicator_ok = "✔︎"
 
 " ===========================================================
 " ===              Git gutter (Git diff)                  ===    

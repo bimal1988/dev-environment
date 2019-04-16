@@ -29,6 +29,7 @@ if dein#load_state('~/.config/nvim/bundle')
     
     " Statusline
     call dein#add('itchyny/lightline.vim')
+    call dein#add('maximbaz/lightline-ale')
     
     " Fuzzy finder
     call dein#add('/usr/local/opt/fzf')

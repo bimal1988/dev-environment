@@ -84,3 +84,10 @@ let g:deoplete#sources#clang#libclang_path = '/usr/local/Cellar/llvm/6.0.0/lib/l
 let g:deoplete#sources#clang#clang_header = '/usr/local/Cellar/llvm/6.0.0/lib/clang'
 
 let g:deoplete#sources#jedi#show_docstring = 1
+
+
+" ===========================================================
+" ===                         FZF                         ===
+" ===========================================================
+let g:fzf_files_options =
+      \ '--preview "(bat --style=numbers --color=always {} 2> /dev/null || cat {} || tree -C {}) 2> /dev/null | head -200"'

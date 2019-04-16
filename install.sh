@@ -103,6 +103,7 @@ case $HOST_OS in
     "MAC")
         echo "Starting installation on OSX..."
         brew_install git git
+        brew_install ctags ctags
         brew_install tmux tmux
         brew_install nvim neovim
         brew_install ripgrep ripgrep

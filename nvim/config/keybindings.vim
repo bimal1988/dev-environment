@@ -5,13 +5,6 @@ let maplocalleader = ' '
 " Remap escape key
 inoremap jj <Esc>
 
-" Movement in insert mode
-inoremap <C-h> <C-o>h
-inoremap <C-l> <C-o>a
-inoremap <C-j> <C-o>j
-inoremap <C-k> <C-o>k
-inoremap <C-^> <C-o><C-^>
-
 " Save
 nnoremap <leader>s :update<cr>
 nnoremap <leader>w :update<cr>
@@ -46,7 +39,11 @@ nnoremap <silent> <F2> :call LanguageClient_textDocument_rename()<CR>
 nnoremap <silent> gf :call LanguageClient_textDocument_codeAction()<CR>
 
 " ALE
-nmap <F8> <Plug>(ale_fix)
+nmap <leader>af :ALEFix<CR>
+nmap <leader>at :ALEToggle<CR>
+
+" FZF
+nnoremap <C-p> :Files<CR>
 
 " Plugin key-mappings.
 " Note: It must be "imap" and "smap".  It uses <Plug> mappings.
@@ -75,8 +72,6 @@ endif
 
 " Nerd Tree
 map <leader>n :NERDTreeToggle<cr>
-map <leader>nb :NERDTreeFromBookmark<Space>
-map <leader>nf :NERDTreeFind<cr>
 
 " Git gutter (Git diff)
 nnoremap <silent> <leader>d :GitGutterToggle<cr>

@@ -23,10 +23,14 @@ if dein#load_state('~/.config/nvim/bundle')
     " Colorschemes
     call dein#add('icymind/neosolarized')
     call dein#add('joshdick/onedark.vim')
+    call dein#add('morhetz/gruvbox')
 
     " Show colors in CSS
     call dein#add('ap/vim-css-color')
     
+    " Physics-based smooth motion in Vim
+    call dein#add('yuttie/comfortable-motion.vim')
+
     " Statusline
     call dein#add('itchyny/lightline.vim')
     call dein#add('maximbaz/lightline-ale')
@@ -65,6 +69,9 @@ if dein#load_state('~/.config/nvim/bundle')
     call dein#add('Konfekt/FastFold')
     call dein#add('tpope/vim-commentary')
     call dein#add('tpope/vim-surround')
+
+    " Automatic CTag generation on saving a file
+    call dein#add('craigemery/vim-autotag')
 
     " Tmux integration
     call dein#add('christoomey/vim-tmux-navigator')

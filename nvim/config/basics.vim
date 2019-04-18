@@ -148,7 +148,7 @@ syntax enable
 " Set colors in terminal
 " NeoSolarized / onedark
 set background=dark
-colorscheme onedark
+colorscheme gruvbox
 
 " Set extra options when running in GUI mode
 if has("gui_running")

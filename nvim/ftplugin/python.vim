@@ -6,7 +6,7 @@ set softtabstop=4
 " ALE settings
 
 " Check Python files with flake8 and pylint.
-let b:ale_linters = ['flake8', 'pylint']
+let b:ale_linters = ['flake8']
 
 " Fix Python files with autopep8 and yapf.
 let b:ale_fixers = ['autopep8', 'yapf', 'isort', 'remove_trailing_lines', 'trim_whitespace']

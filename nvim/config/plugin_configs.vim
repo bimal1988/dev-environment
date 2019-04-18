@@ -18,7 +18,6 @@ highlight ALEWarningSign ctermfg=172
 " ===                      Ligthline                      ===    
 " ===========================================================
 let g:lightline = {
-      \ 'colorscheme': 'onedark',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'fugitive', 'readonly', 'modified' ] ],

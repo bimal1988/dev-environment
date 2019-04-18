@@ -70,11 +70,13 @@ if dein#load_state('~/.config/nvim/bundle')
     call dein#add('tpope/vim-commentary')
     call dein#add('tpope/vim-surround')
 
-    " Automatic CTag generation on saving a file
+    " CTag generation and tagbar navigation
     call dein#add('craigemery/vim-autotag')
+    call dein#add('majutsushi/tagbar')
 
     " Tmux integration
     call dein#add('christoomey/vim-tmux-navigator')
+    call dein#add('benmills/vimux')
 
     call dein#end()
     call dein#save_state()

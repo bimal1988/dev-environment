@@ -71,7 +71,7 @@ let g:lightline.tabline = {
 
 set showtabline=2  " Show tabline
 set guioptions-=e  " Don't use GUI tabline
-let g:lightline#ale#indicator_checking = "⏳"
+let g:lightline#ale#indicator_checking = "⌛"
 let g:lightline#ale#indicator_warnings = "◆ "
 let g:lightline#ale#indicator_errors = "✗ "
 let g:lightline#ale#indicator_ok = "✔︎"

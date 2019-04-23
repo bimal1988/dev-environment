@@ -65,10 +65,11 @@ if dein#load_state('~/.config/nvim/bundle')
     call dein#add('tpope/vim-fugitive')
     call dein#add('airblade/vim-gitgutter')
 
-    " Code-folding, Commenting and Quoting
+    " Code-folding, Commenting, Quoting and Tab indicator
     call dein#add('Konfekt/FastFold')
     call dein#add('tpope/vim-commentary')
     call dein#add('tpope/vim-surround')
+    call dein#add('yggdroot/indentline')
 
     " CTag generation and tagbar navigation
     call dein#add('craigemery/vim-autotag')
